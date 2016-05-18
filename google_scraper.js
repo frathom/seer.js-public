@@ -72,8 +72,8 @@ var SeerJs_GoogleScraper = (function() {
    */
   function extractOrganic(html) {
     html = html.replace(/\n|\r/g, '');
-    var allOrganic = html.match(/<li class=\"g\">(.*)<\/li>/gi).toString(),
-        results = allOrganic.split("<li class=\"g\">"),
+    var allOrganic = html.match(/<div class=\"g\">(.*)<\/div>/gi).toString(),
+        results = allOrganic.split("<div class=\"g\">"),
         organicData = [],
         i = 0,
         len = results.length,
